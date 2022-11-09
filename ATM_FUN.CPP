@@ -1,0 +1,76 @@
+#include<stdio.h>
+#include<conio.h>
+int main(){
+//clrscr();
+int ac_no;
+char name[20];
+long withdraw,tot,dep,store=0,deposite=0;
+int transection=1;
+printf("\n\t\t\t   BANKING ONLINE SYSTEM\n\n");
+printf("\t\t* * * * * * * * * * * * * * * * * * * * *\n");
+printf("\t\t*\t\t\t\t\t*\n");
+printf("\t\t*\t\t\t\t\t*\n");
+printf("\t\t*\t   Welcome to SJ BANk\t\t*\n");
+printf("\t\t*\t\t\t\t\t*\n");
+printf("\t\t*\t\t\t\t\t*\n");
+printf("\t\t* * * * * * * * * * * * * * * * * * * * *\n");
+// This Section is a user enters details.....
+printf("\nEnter a your Account number :- ");
+scanf("%d",&ac_no);
+while(ac_no != 1111){
+printf("you enter Wrong password\n\n");
+printf("enter Right password :- ");
+scanf("%d",ac_no);
+if(ac_no != 1111)
+printf("ENTER VALIDE PASSWORD");
+}
+printf("\nEnter a your Name :- ");
+scanf("%s",name[20]);
+while(transection == 1){
+int option;
+printf("1.check balance...\n");
+printf("2.Withdraw........\n");
+printf("3.Deposite........\n");
+printf("4.exit............\n");
+switch(option)
+{
+case 1:
+printf("your Account Avalibal Balance\n");
+printf("current balance is= %lu",deposite);
+break;
+case 2:
+printf("\t\t\t   Banking Section\t\n");
+printf("Enter Amount :- ");
+scanf("%lu",&store);
+if(store > 10000){
+printf("your balance is not avalibale amount");
+}else{
+tot=deposite-store;
+deposite=tot;
+printf("your current balance is= %lu",deposite);
+}
+break;
+
+case 3:
+printf("\t\t\t  Banking Section\t\n");
+printf("your current balance is= %lu ",deposite);
+printf("Enter a amount :- ");
+scanf("%lu",dep);
+deposite += dep;
+//clrscr();
+printf("your current balance is= %lu",deposite);
+break;
+
+case 4:
+printf("Thank you for visite online system");
+transection=0;
+break;
+
+default:
+printf("Invalide option");
+}
+
+}
+
+getch();
+}
